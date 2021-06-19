@@ -1,6 +1,6 @@
 import redis
 import csv
-r = redis.StrictRedis(host='<REDIS HOST>',
-        port=6380, db=0, password='<REDIS KEY>', ssl=True)
+r = redis.StrictRedis(host='<HOST>',
+        port=6379, db=0, password='<KEY>', ssl=False)
 
-print(r.get('1995-01-30ipca'))
+print(r.get('<KEY>'))

@@ -1,7 +1,7 @@
 import redis
 import csv
 r = redis.StrictRedis(host='<REDIS HOST>',
-        port=6380, db=0, password='<REIDS KEY>', ssl=True)
+        port=6380, db=0, password='<REDIS KEY>', ssl=True)
 
 with open('load.csv', mode='r') as csv_file:
     csv_reader = csv.DictReader(csv_file)

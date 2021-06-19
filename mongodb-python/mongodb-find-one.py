@@ -2,10 +2,9 @@ import pymongo
 import csv
 
 client = pymongo.MongoClient(
-   "<MONGODB CONNECTION STRING>")
+   "<CONNECTION STRING>", ssl=True,ssl_cert_reqs='CERT_NONE')
 
-db = client['indices_mercado']
+db = client['<DATABASE>']
+empregados = db['<COLLECTION>']
 
-indexes = db['indice']
-
-print(indexes.find_one({"matricula":"9876"}))
+print(empregados.list_indexes())
